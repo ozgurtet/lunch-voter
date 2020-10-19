@@ -7,13 +7,13 @@
     - [Restaurant](#restaurant)
     - [Event](#event)
     - [Vote](#vote)
-  - [Project Structure](#projectStructure)
+  - [Project Structure](#project-structure)
     - [Backend](#backend)
     - [Frontend](#frontend)
-  - [Installation](#technologies)
-    - [JDK 8](#backend)
-    - [Apache Maven](#frontend)
-    - [Apache Maven](#frontend)
+  - [Installations for Running Application](#installations-for-running-application)
+    - [JDK 8](#jdk-8)
+    - [Apache Maven](#apache-maven)
+    - [Apache Tomcat](#apache-tomcat)
 
 ## Features
 
@@ -49,7 +49,7 @@ Spring Boot, JPA, Java 8, H2 Database and Apache Maven technologies used for imp
 ### Frontend
 This module implemented in Vue JS framework that contains web pages and JavaScript logics to manipulate DOM.
 
-## Installations for Bootstrapping Application
+## Installations for Running Application
 
 ### JDK 8
 
@@ -58,3 +58,7 @@ To install JDK 8 please follow instructions written in URL https://docs.oracle.c
 ### Apache Maven
 
 To install Apache Maven please follow instructions written in URL https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html.https://maven.apache.org/install.html
+
+### Apache Tomcat
+
+Please download installation file for existing operating system from URL https://tomcat.apache.org/download-80.cgi
