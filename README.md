@@ -78,13 +78,13 @@ Please download installation file for existing operating system from URL https:/
 - Visit http://localhost:8080/lunch-voter URL on browser and logic with user credentials below.
   ###### Predefined users are below.
   ###### Username: M_JORDAN
-  ###### Password:
-  ###### Status:
+  ###### Password: mj1234
+  ###### Status  : ADMIN
   --------------
-  ###### Username:
-  ###### Password:
-  ###### Status:
+  ###### Username: K_BRYANT
+  ###### Password: kb1234
+  ###### Status  : NADMIN
   --------------
-  ###### Username:
-  ###### Password:
-  ###### Status:
+  ###### Username: L_JAMES
+  ###### Password: lb1234
+  ###### Status  : NADMIN  
