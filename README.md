@@ -3,10 +3,10 @@
 ## Table of Contents
 
   - [Features](#features)
-  - [Pages](#browser-support)
-    - [Global axios defaults](#global-axios-defaults)
-    - [Custom instance defaults](#custom-instance-defaults)
-    - [Config order of precedence](#config-order-of-precedence)
+  - [Pages](#pages)
+    - [Login](#login)
+    - [Restaurant](#restaurant)
+    - [Event](#event)
   - [Installing](#installing)
 
 
@@ -15,5 +15,14 @@
 This project goals voting for restaurants belongs to daily lunch events.
 Application has three main web page below.
 
-## Screen
+## Pages
 Application has 3 main web page.
+
+### Login
+Login pages
+
+### Restaurant
+Restaurant pages
+
+### Event
+Event pages
