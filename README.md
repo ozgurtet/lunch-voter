@@ -7,10 +7,12 @@
     - [Restaurant](#restaurant)
     - [Event](#event)
     - [Vote](#vote)
-  - [Technologies](#technologies)
+  - [Project Structure](#technologies)
     - [Backend](#backend)
     - [Frontend](#frontend)
   - [Installation](#technologies)
+    - [JDK 8](#backend)
+    - [Apache Maven](#frontend)
 
 ## Features
 
@@ -39,11 +41,19 @@ Every user limited for voting only one restaurant.
 Project consist of two modules lunch-voter-backend and lunch-voter-frontend.
 
 ### Backend
-This module contains Rest APIs, web configuration and Database operations.
-Spring Boot, JPA, Java 8, H2 Database and Maven technologies used for implementing this module.
-###### Note: If server restart or shutdown, all data will lost in H2 in memory database.
+This module contains Rest APIs, web configuration and database operations.
+Spring Boot, JPA, Java 8, H2 Database and Apache Maven technologies used for implementing this module.
+###### Note: If server restart or shutdown, all data will be lost in H2 in memory database.
 
 ### Frontend
-This module implemented in Vue JS framework that contains web pages and JavaScript code block to manipulate DOM.
+This module implemented in Vue JS framework that contains web pages and JavaScript logics to manipulate DOM.
 
-## Installation
+## Installations for Bootstrapping Application
+
+### JDK 8
+
+To install JDK 8 please follow instructions written in URL https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html.
+
+### Apache Maven
+
+To install Apache Maven please follow instructions written in URL https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html.https://maven.apache.org/install.html
