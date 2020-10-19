@@ -4,7 +4,6 @@
 
   - [Features](#features)
   - [Pages](#pages)
-    - [Login](#login)
     - [Restaurant](#restaurant)
     - [Event](#event)
     - [Vote](#vote)
@@ -31,3 +30,4 @@ Users can show vote result of any expired event.
 This page list restaurants for voting. User can vote restaurant and undo given vote.
 If users favorite restaurant doesn't exist in restaurant list, user can create a new restaurant
 Furthermore in this page restaurant item shows total vote number and voter list for each restaurant.
+Every user limited for voting only one restaurant.
