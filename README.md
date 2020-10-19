@@ -76,15 +76,15 @@ Please download installation file for existing operating system from URL https:/
   TomcatInstallationDirectory/webapps directory.
 
 - Visit http://localhost:8080/lunch-voter URL on browser and logic with user credentials below.
-###### Predefined users are below.
-###### Username: M_JORDAN
-###### Password:
-###### Status:
---------------
-###### Username:
-###### Password:
-###### Status:
---------------
-###### Username:
-###### Password:
-###### Status:
+  ###### Predefined users are below.
+  ###### Username: M_JORDAN
+  ###### Password:
+  ###### Status:
+  --------------
+  ###### Username:
+  ###### Password:
+  ###### Status:
+  --------------
+  ###### Username:
+  ###### Password:
+  ###### Status:
