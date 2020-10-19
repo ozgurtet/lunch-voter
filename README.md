@@ -70,7 +70,7 @@ Please download installation file for existing operating system from URL https:/
 
 - Clone repository
 
-- Move to repository root directory on file system. Open terminal here and execute 'mvn install' command.
+- Move to repository root directory on file system. Open terminal here and execute 'mvn clean install' command.
 
 - Open ProjectRootDirectory/lunch-voter-backend on file system  and copy lunch-voter.war into
   TomcatInstallationDirectory/webapps directory.
