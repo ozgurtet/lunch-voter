@@ -1,0 +1,15 @@
+.login-wrapper {
+  .login-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-list {
+    margin-right: 30px;
+  }
+
+  .opaque-text {
+    opacity: 0.5;
+  }
+}

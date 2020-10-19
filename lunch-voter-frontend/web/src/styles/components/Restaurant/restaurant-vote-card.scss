@@ -1,0 +1,15 @@
+.restaurant-vote-wrapper {
+  margin-bottom: 30px;
+
+  .disabled {
+    cursor: no-drop;
+    pointer-events: none;
+    opacity: 0.5;
+
+  }
+
+  .voter {
+    margin-left: 10px;
+  }
+
+}

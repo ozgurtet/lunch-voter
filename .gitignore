@@ -1,0 +1,12 @@
+
+lunch-voter-frontend/target/
+lunch-voter-backend/target/
+lunch-voter-backend/.settings/
+src/.DS_Store
+lunch-voter-backend/.DS_Store
+lunch-voter-backend/.project
+lunch-voter-backend/.classpath
+.DS_Store
+lunch-voter-frontend/.classpath
+lunch-voter-frontend/.project
+*.prefs
