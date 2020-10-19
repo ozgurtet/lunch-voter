@@ -10,3 +10,7 @@ lunch-voter-backend/.classpath
 lunch-voter-frontend/.classpath
 lunch-voter-frontend/.project
 *.prefs
+
+
+lunch-voter-frontend/web/node_modules/*
+!lunch-voter-frontend/web/node_modules/axios
