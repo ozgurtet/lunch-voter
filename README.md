@@ -7,6 +7,9 @@
     - [Restaurant](#restaurant)
     - [Event](#event)
     - [Vote](#vote)
+  - [Technologies](#technologies)
+    - [Backend](#backend)
+    - [Frontend](#frontend)
 
 
 ## Features
@@ -28,6 +31,9 @@ Users can show vote result of any expired event.
 
 ### Vote
 This page list restaurants for voting. User can vote restaurant and undo given vote.
-If users favorite restaurant doesn't exist in restaurant list, user can create a new restaurant
-Furthermore in this page restaurant item shows total vote number and voter list for each restaurant.
+If users favorite restaurant doesn't exist in restaurant list, user can create a new restaurant.
+Furthermore in this page every restaurant item shows users who vote for restaurant and voter numbers.
 Every user limited for voting only one restaurant.
+
+## Technologies
+The page responsible for creating restaurant with name, website URL, restaurant detail, restaurant address informations or removing restaurants.
