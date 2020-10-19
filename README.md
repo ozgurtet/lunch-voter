@@ -14,6 +14,7 @@
     - [JDK 8](#jdk-8)
     - [Apache Maven](#apache-maven)
     - [Apache Tomcat](#apache-tomcat)
+  - [Running Application](#running-application)
 
 ## Features
 
@@ -62,3 +63,30 @@ To install Apache Maven please follow instructions written in URL https://docs.o
 ### Apache Tomcat
 
 Please download installation file for existing operating system from URL https://tomcat.apache.org/download-80.cgi
+
+## Running Application
+
+- Open terminal and move to TomcatInstallationDirectory/bin. Execute './catalina.sh' command. For extra detail about how to run tomcat on different operating systems,  please visit website https://www.oreilly.com/library/view/tomcat-the-definitive/9780596101060/ch01s02.html
+
+- Clone repository
+
+- Move to repository root directory on file system. Open terminal here and execute 'mvn install' command.
+
+- Open ProjectRootDirectory/lunch-voter-backend on file system  and copy lunch-voter.war into
+  TomcatInstallationDirectory/webapps directory.
+
+- Visit http://localhost:8080/lunch-voter URL on browser and logic with user credentials below.
+
+######: Predefined users are below.
+
+  Username:
+  Password:
+  Status:
+
+  Username:
+  Password:
+  Status:
+
+  Username:
+  Password:
+  Status:
