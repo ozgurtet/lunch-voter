@@ -7,11 +7,12 @@
     - [Restaurant](#restaurant)
     - [Event](#event)
     - [Vote](#vote)
-  - [Project Structure](#technologies)
+  - [Project Structure](#projectStructure)
     - [Backend](#backend)
     - [Frontend](#frontend)
   - [Installation](#technologies)
     - [JDK 8](#backend)
+    - [Apache Maven](#frontend)
     - [Apache Maven](#frontend)
 
 ## Features
@@ -37,7 +38,7 @@ If users favorite restaurant doesn't exist in restaurant list, user can create a
 Furthermore in this page every restaurant item shows users who vote for restaurant and voter numbers.
 Every user limited for voting only one restaurant.
 
-## Technologies
+## Project Structure
 Project consist of two modules lunch-voter-backend and lunch-voter-frontend.
 
 ### Backend
