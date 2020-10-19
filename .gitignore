@@ -14,3 +14,4 @@ lunch-voter-frontend/.project
 
 lunch-voter-frontend/web/node_modules
 lunch-voter-backend/src/main/resources/public/*
+lunch-voter-backend/src/main/resources/public/index.html

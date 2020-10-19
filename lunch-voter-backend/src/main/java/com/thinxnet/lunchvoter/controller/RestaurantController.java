@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.thinxnet.lunchvoter.entity.Restaurant;
 import com.thinxnet.lunchvoter.repo.RestaurantRepository;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/restaurant")
 public class RestaurantController {
@@ -48,7 +47,7 @@ public class RestaurantController {
 	}
 	
 	
-	@RequestMapping(value="/delete/{restaurantId}", method=RequestMethod.DELETE, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/delete/{restaurantId}", method=RequestMethod.DELETE, produces="application/json")
 	public ResponseEntity<List<Restaurant>> delete(@PathVariable Long restaurantId) {
 		restaurantRepo.deleteById(restaurantId);
 		List<Restaurant> restaurantList = restaurantRepo.findAll();

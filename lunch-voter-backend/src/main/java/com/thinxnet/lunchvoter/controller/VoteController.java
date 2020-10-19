@@ -19,7 +19,6 @@ import com.thinxnet.lunchvoter.entity.Vote;
 import com.thinxnet.lunchvoter.repo.VoteRepository;
 import com.thinxnet.lunchvoter.repo.VotesByEventRepository;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/vote")
 public class VoteController {
@@ -38,7 +37,7 @@ public class VoteController {
 		return new ResponseEntity<Vote>(insertedVote, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/delete", method=RequestMethod.DELETE, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/delete", method=RequestMethod.DELETE, produces="application/json")
 	public ResponseEntity<List<Vote>> delete(@RequestBody Vote vote) {
 		voteRepository.delete(vote);
 		List<Vote> voteList = voteRepository.findAll();
@@ -58,7 +57,7 @@ public class VoteController {
 		 return new ResponseEntity<List<EventVote>>(votes, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/deleteUserVote/{userId}/{eventId}", method=RequestMethod.DELETE, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/deleteUserVote/{userId}/{eventId}", method=RequestMethod.DELETE, produces="application/json")
 	public ResponseEntity<List<Vote>> deleteUserVote(@PathVariable Long userId, @PathVariable Long eventId) {
 		System.out.println(userId + "-" + eventId);
 		voteRepository.deleteVoteByEventIdUsername(eventId, userId);
@@ -66,7 +65,7 @@ public class VoteController {
 		return new ResponseEntity<List<Vote>>(voteList, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/deleteAllUserVotes/{eventId}", method=RequestMethod.DELETE, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/deleteAllUserVotes/{eventId}", method=RequestMethod.DELETE, produces="application/json")
 	public ResponseEntity<List<Vote>> deleteUserVote(@PathVariable Long eventId) {
 		voteRepository.deleteAllVoteByEventId(eventId);
 		List<Vote> voteList = voteRepository.findAll();

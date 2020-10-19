@@ -20,8 +20,7 @@ const getDefaultState = () => {
     votedRestaurantIndex: -1,
     startLoader: false,
     userVote: null,
-    isRestaurantsRemovable: false,
-    voterListMap: null
+    isRestaurantsRemovable: false
   }
 }
 
@@ -69,24 +68,6 @@ export default new Vuex.Store({
     },
     removeRestaurant(state, value) {
       state.restaurantList.splice(value, 1);
-    },
-    setVoterListMap(state, value) {
-      state.voterListMap = value
-    },
-    setNewRestaurantToMap(state, value) {
-      state.voterListMap.set(value.restaurantId, []);
-    },
-    addVoters(state, value) {
-      state.voterListMap.get(value.restaurantId).push(value.userName);
-    },
-    removeVoter(state, value) {
-      const voterList = state.voterListMap.get(value.restaurantId);
-      if(voterList.indexOf(value.userName) === 0) {
-        state.voterListMap.set(value.restaurantId, []);
-      } else {
-        state.voterListMap.set(value.restaurantId, voterList.splice(voterList.indexOf(value.userName), 1));
-      }
-
     }
   },
   getters: {
@@ -113,9 +94,6 @@ export default new Vuex.Store({
     },
     getIsRestaurantsRemovable(state) {
       return state.isRestaurantsRemovable;
-    },
-    getVoterListMap(state) {
-      return state.voterListMap;
     }
   },
   plugins: [vuexLocal.plugin]

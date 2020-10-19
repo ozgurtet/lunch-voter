@@ -3,11 +3,12 @@
     <div class="restaurant-view-wrapper">
         <div class="container">
           <p class="title is-3 pt-5">Restaurant List</p>
-          <ul>
+          <ul v-if="mappingProcessFinished">
             <li v-for="(restaurant, index) in storeRestaurantList" :key="restaurant.restaurantId">
                 <RestaurantVoteCard
                  :restaurant="restaurant"
                  :restaurantIndex = "index"
+                 :voterList = "getVoterList(restaurant)"
                 />
             </li>
           </ul>
@@ -31,7 +32,9 @@ export default {
   data() {
     return {
       lunchVoterService: null,
-      restaurantVoterMap: null
+      restaurantVoterMap: null,
+      voterLists: new Map(),
+      mappingProcessFinished: false,
     }
   },
   components: {
@@ -50,9 +53,6 @@ export default {
     },
     user() {
       return this.$store.getters.getUser;
-    },
-    getVoterLisMap() {
-      return this.$store.getters.getVoterListMap;
     }
   },
   created() {
@@ -64,7 +64,7 @@ export default {
     async getRestaurantList() {
       const restaurantList = await this.lunchVoterService.getRestaurantList();
       this.$store.commit('setRestaurants', restaurantList);
-      
+
       this.createRestaurantMap();
       this.getVotesByEvent();
     },
@@ -84,26 +84,25 @@ export default {
       for(let eventNote of allEventVotes) {
         const restaurantId = eventNote.restaurantId;
         const userName = eventNote.userName;
-        this.addVoters(restaurantId, userName);
+        this.addVoterRestaurantMap(restaurantId, userName);
       }
 
+      this.mappingProcessFinished = true;
     },
-    addVoters(resId, userName) {
-      this.$store.commit('addVoters', {restaurantId: resId, userName: userName});
+    addVoterRestaurantMap(restaurantId, userName) {
+      this.voterLists.get(restaurantId).push(userName);
+    },
+    getVoterList(restaurant) {
+        return this.voterLists.get(restaurant.restaurantId);
     },
     createRestaurantMap() {
-      const restaurantMap = new Map();
 
       for(let restaurant of this.storeRestaurantList) {
         const retaurantId = restaurant.restaurantId;
         const emptyVoterList = [];
-        restaurantMap.set(retaurantId, emptyVoterList);
+        this.voterLists.set(retaurantId, emptyVoterList);
       }
 
-      this.$store.commit('setVoterListMap', restaurantMap);
-    },
-    getVotersOfRestaurant(restaurantIndex) {
-      return this.restaurantMap.get(restaurantIndex);
     },
     setSelectedEventIndex(userVotes) {
         // Means event have any votes

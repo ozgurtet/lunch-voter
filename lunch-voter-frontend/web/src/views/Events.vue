@@ -41,7 +41,7 @@ export default {
   },
   watch: {
     storeEventList(newList) {
-      this.setEventExpired(newList);
+      this.checkEventExpired(newList);
     }
   },
   methods: {
@@ -61,7 +61,7 @@ export default {
           event.isExpired = false;
         }
       }
-      
+
     },
     isEventExpired(eventExpireDate) {
       const now = this.$moment(new Date());

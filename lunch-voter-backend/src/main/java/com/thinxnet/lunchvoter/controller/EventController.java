@@ -16,7 +16,6 @@ import com.thinxnet.lunchvoter.entity.LunchEvent;
 import com.thinxnet.lunchvoter.repo.LunchEventRepository;
 import com.thinxnet.lunchvoter.repo.RestaurantRepository;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/event")
 public class EventController {
@@ -37,7 +36,7 @@ public class EventController {
 		return new ResponseEntity<List<LunchEvent>>(eventList, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/delete/{eventId}", method=RequestMethod.DELETE, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/delete/{eventId}", method=RequestMethod.DELETE, produces="application/json")
 	public ResponseEntity<List<LunchEvent>> delete(@PathVariable Long eventId) {
 		
 		if(eventRepo.existsById(eventId)) {

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lunch-voter/precache-manifest.ed72dc6c6152f855bd688580f85d6045.js"
+  "/lunch-voter/precache-manifest.a07d0593f0ef7adc96d375fce0820a23.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "web"});

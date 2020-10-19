@@ -117,8 +117,6 @@ export default class LunchVoterService {
   }
 
   deleteUserVoteEvent(req) {
-    console.log('DeleteUserVoteEvent');
-    console.log(req);
     return this.lunchVoterServiceClient.delete(`${Endpoints.deleteUserVoteEvent}` + '/' + req.userId + '/' + req.eventId)
     .then(response => {
       return response.data;
@@ -129,8 +127,6 @@ export default class LunchVoterService {
   }
 
   resetEventVotes(req) {
-    console.log('DeleteUserVoteEvent');
-    console.log(req);
     return this.lunchVoterServiceClient.delete(`${Endpoints.resetEventVotes}` + '/' + req.eventId)
     .then(response => {
       return response.data;

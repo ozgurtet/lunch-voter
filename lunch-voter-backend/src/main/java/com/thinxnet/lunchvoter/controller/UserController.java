@@ -21,7 +21,6 @@ import com.thinxnet.lunchvoter.repo.RestaurantRepository;
 import com.thinxnet.lunchvoter.repo.UserRepository;
 
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -67,7 +66,7 @@ public class UserController {
 		return new ResponseEntity<List<User>>(userList, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/delete/{userId}", method=RequestMethod.DELETE, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/delete/{userId}", method=RequestMethod.DELETE, produces="application/json")
 	public ResponseEntity<List<User>> delete(@PathVariable Long userId) {
 		
 		if(userRepo.existsById(userId)) {

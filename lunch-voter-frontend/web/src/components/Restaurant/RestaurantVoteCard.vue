@@ -15,31 +15,31 @@
           </div>
           <nav class="level is-mobile">
 
+          <div class="level-left">
+              <a class="level-item" href="">Web Site: {{restaurant.websiteURL}}</a>
+          </div>
+
+          <div v-if="isEventContinue" class="level-left">
             <div class="level-left">
-                <a class="level-item" href="">Web Site: {{restaurant.websiteURL}}</a>
+                <button v-if="isRestaurantVoted" class="button is-danger is-small" @click="undoVote">
+                   <span class="icon is-small">
+                     <i class="fa fa-undo" aria-hidden="true"></i>
+                   </span>
+                </button>
+                <button v-else class="button is-success is-small" @click="vote">Vote</button>
             </div>
 
-            <div v-if="isEventContinue" class="level-left">
-              <div class="level-left">
-                  <button v-if="isRestaurantVoted" class="button is-danger is-small" @click="undoVote">
-                     <span class="icon is-small">
-                       <i class="fa fa-undo" aria-hidden="true"></i>
-                     </span>
-                  </button>
-                  <button v-else class="button is-success is-small" @click="vote">Vote</button>
-              </div>
-
-            </div>
+          </div>
           </nav>
 
           <nav class="level is-mobile">
 
-              <div class="level-left">
-                  <span>Voters:</span>
-                  <span v-for="voter in voterList" :key="voter.voteId" class="tag is-info voter">{{ voter }}</span>
-              </div>
+            <div class="level-left">
+                <span>Voters:</span>
+                <span v-for="voter in voterList" :key="voter.voteId" class="tag is-info voter">{{ voter }}</span>
+            </div>
 
-              <span>This restaurant voted by <strong> {{voterList.length}}</strong> user.</span>
+            <span>This restaurant voted by <strong> {{voterList.length}}</strong> user.</span>
 
           </nav>
         </div>
@@ -53,17 +53,15 @@ import LunchVoterService from '@/service/LunchVoterService'
 
 export default {
   name: 'Restaurant-Vote-Card',
-  props: ['restaurant', 'restaurantIndex'],
+  props: ['restaurant', 'restaurantIndex', 'voterList'],
   data() {
     return {
       lunchVoterService: null,
       isRestaurantVoted: false,
-      voterList: this.getVoterList()
     };
   },
   created() {
     this.lunchVoterService = new LunchVoterService();
-    console.log(this.voterListOfRestaurant);
   },
   mounted() {
     this.setRestaurantVoted();
@@ -89,9 +87,6 @@ export default {
     },
     isEventContinue() {
       return !this.$store.getters.getVotedEvent.isExpired;
-    },
-    voterListOfRestaurant() {
-      return this.$store.getters.getVoterListMap.get(this.restaurant.restaurantId);
     }
   },
   watch: {
@@ -100,9 +95,6 @@ export default {
     }
   },
   methods: {
-    getVoterList() {
-      return this.$store.getters.getVoterListMap.get(this.restaurant.restaurantId);
-    },
     setRestaurantVoted() {
       if(this.isUserVoteExitOnevent() && this.checkVotedRestaurant()){
         this.isRestaurantVoted = true;
