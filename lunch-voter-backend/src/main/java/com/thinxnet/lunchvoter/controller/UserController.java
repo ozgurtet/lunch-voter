@@ -78,7 +78,7 @@ public class UserController {
 		return new ResponseEntity<List<User>>(userList, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/list", method=RequestMethod.GET, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/list", method=RequestMethod.GET, produces="application/json")
 	public ResponseEntity<List<User>> list() {
 		List<User> userList = userRepo.findAll();
 		return new ResponseEntity<List<User>>(userList, HttpStatus.OK);

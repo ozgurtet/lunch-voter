@@ -48,7 +48,7 @@ public class EventController {
 		return new ResponseEntity<List<LunchEvent>>(eventList, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/list", method=RequestMethod.GET, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/list", method=RequestMethod.GET, produces="application/json")
 	public ResponseEntity<List<LunchEvent>> list() {
 		List<LunchEvent> eventList = eventRepo.findAll();
 		return new ResponseEntity<List<LunchEvent>>(eventList, HttpStatus.OK);

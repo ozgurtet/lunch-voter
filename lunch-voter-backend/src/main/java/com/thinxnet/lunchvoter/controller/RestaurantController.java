@@ -55,7 +55,7 @@ public class RestaurantController {
 		return new ResponseEntity<List<Restaurant>>(restaurantList, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/list", method=RequestMethod.GET, consumes="application/json", produces="application/json")
+	@RequestMapping(value="/list", method=RequestMethod.GET, produces="application/json")
 	public ResponseEntity<List<Restaurant>> list() {
 		List<Restaurant> restaurantList = restaurantRepo.findAll();
 		return new ResponseEntity<List<Restaurant>>(restaurantList, HttpStatus.OK);

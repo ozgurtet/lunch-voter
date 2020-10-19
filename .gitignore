@@ -12,5 +12,5 @@ lunch-voter-frontend/.project
 *.prefs
 
 
-lunch-voter-frontend/web/node_modules/*
-!lunch-voter-frontend/web/node_modules/axios
+lunch-voter-frontend/web/node_modules
+lunch-voter-backend/src/main/resources/public/*
