@@ -10,7 +10,7 @@
   - [Technologies](#technologies)
     - [Backend](#backend)
     - [Frontend](#frontend)
-
+  - [Installation](#technologies)
 
 ## Features
 
@@ -36,4 +36,14 @@ Furthermore in this page every restaurant item shows users who vote for restaura
 Every user limited for voting only one restaurant.
 
 ## Technologies
-The page responsible for creating restaurant with name, website URL, restaurant detail, restaurant address informations or removing restaurants.
+Project consist of two modules lunch-voter-backend and lunch-voter-frontend.
+
+### Backend
+This module contains Rest APIs, web configuration and Database operations.
+Spring Boot, JPA, Java 8, H2 Database and Maven technologies used for implementing this module.
+###### Note: If server restart or shutdown, all data will lost in H2 in memory database.
+
+### Frontend
+This module implemented in Vue JS framework that contains web pages and JavaScript code block to manipulate DOM.
+
+## Installation
