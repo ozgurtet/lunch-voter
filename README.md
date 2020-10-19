@@ -75,7 +75,7 @@ Please download installation file for existing operating system from URL https:/
 - Open ProjectRootDirectory/lunch-voter-backend on file system  and copy lunch-voter.war into
   TomcatInstallationDirectory/webapps directory.
 
-- Visit http://localhost:8080/lunch-voter URL on browser and logic with user credentials below. You can start to create events and vote restaurants.
+- Visit http://localhost:8080/lunch-voter URL on browser and login with user credentials below. You can start to create events and vote restaurants.
   ###### Predefined users are below.
   ###### Username: M_JORDAN
   ###### Password: mj1234
