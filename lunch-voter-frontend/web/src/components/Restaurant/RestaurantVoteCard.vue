@@ -21,12 +21,12 @@
 
           <div v-if="isEventContinue" class="level-left">
             <div class="level-left">
-                <button v-if="isRestaurantVoted" class="button is-danger is-small" @click="undoVote">
+                <button id="undo-vote" v-if="isRestaurantVoted" class="button is-danger is-small" @click="undoVote">
                    <span class="icon is-small">
                      <i class="fa fa-undo" aria-hidden="true"></i>
                    </span>
                 </button>
-                <button v-else class="button is-success is-small" @click="vote">Vote</button>
+                <button id="vote" v-else class="button is-success is-small" @click="vote">Vote</button>
             </div>
 
           </div>
