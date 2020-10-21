@@ -66,7 +66,7 @@ Please download installation file for existing operating system from URL https:/
 
 ## Running Application
 
-- Open terminal and move to TomcatInstallationDirectory/bin. Execute './catalina.sh' command. For extra detail about how to run tomcat on different operating systems,  please visit website https://www.oreilly.com/library/view/tomcat-the-definitive/9780596101060/ch01s02.html
+- Open terminal and move to TomcatInstallationDirectory/bin. Execute './catalina.sh' command. For extra detail about how to run tomcat on different operating systems,  please visit website https://tomcat.apache.org/tomcat-8.5-doc/introduction.html
 
 - Clone repository
 
